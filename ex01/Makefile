@@ -1,12 +1,12 @@
-NAME = conversion
+NAME = Serialization
 
 CC = C++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-HFILE =  ScalarConverter.hpp
+SRC = Serializer.cpp main.cpp
 
-SRC = ScalarConverter.cpp main.cpp
+HFILE = Serializer.hpp
 
 OBJ = $(SRC:%.cpp=%.o)
 

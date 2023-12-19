@@ -5,18 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aziyani <aziyani@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 10:30:32 by aziyani           #+#    #+#             */
-/*   Updated: 2023/12/19 12:15:20 by aziyani          ###   ########.fr       */
+/*   Created: 2023/12/18 12:14:22 by aziyani           #+#    #+#             */
+/*   Updated: 2023/12/18 13:18:16 by aziyani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#include "Serializer.hpp"
 
-int main(int ac, char **av){
-    ScalarConverter a;
+int main(int __unused argc, char const __unused **argv)
+{
+    Serializer serializer;
 
-    if (ac > 1)
-        a.convert(av[1]);
-    
-    return(0);
+    Data data;
+
+    data.FirstName = "ayoub";
+
+    uintptr_t uni = serializer.serialize(&data);
+    Data *new_data = serializer.deserialize(uni);
+
+    std::cout << new_data->FirstName << std::endl;
+
+    return 0;
 }

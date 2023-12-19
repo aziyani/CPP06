@@ -1,12 +1,12 @@
-NAME = conversion
+NAME = Identify
 
 CC = C++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-HFILE =  ScalarConverter.hpp
+SRC = Base.cpp A.cpp B.cpp C.cpp main.cpp
 
-SRC = ScalarConverter.cpp main.cpp
+HFILE = Base.hpp A.hpp B.hpp C.hpp
 
 OBJ = $(SRC:%.cpp=%.o)
 

@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aziyani <aziyani@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 10:30:32 by aziyani           #+#    #+#             */
-/*   Updated: 2023/12/19 12:15:20 by aziyani          ###   ########.fr       */
+/*   Created: 2023/12/18 15:00:21 by aziyani           #+#    #+#             */
+/*   Updated: 2023/12/19 15:31:48 by aziyani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#ifndef A_HPP
+# define A_HPP
 
-int main(int ac, char **av){
-    ScalarConverter a;
+# include "Base.hpp"
 
-    if (ac > 1)
-        a.convert(av[1]);
-    
-    return(0);
-}
+class Base;
+
+class A : public Base
+{
+    public:
+        A();
+        ~A();
+};
+
+#endif

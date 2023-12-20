@@ -6,7 +6,7 @@
 /*   By: aziyani <aziyani@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 15:23:15 by aziyani           #+#    #+#             */
-/*   Updated: 2023/12/19 12:45:33 by aziyani          ###   ########.fr       */
+/*   Updated: 2023/12/20 15:34:50 by aziyani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ ScalarConverter::~ScalarConverter()
 int checkType(const std::string& literal){
 	int type = 0, flag = 0;
 	char *p;
-	std::strtod(literal.c_str(), &p);
+	std::strtod(literal.c_str(), &p); // convet from pointer to double
 	if (!std::isdigit(literal.c_str()[0]) && literal.length() == 1){
 		return CHAR;
 	}
